@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/items_{id}', function ($id) {
+    $item = App\Item::find($id);
+    echo $item->name;
+});
+Route::get('/addtocart_itemid_{itemid}', 'HomeController@addToCart');
+
+
+Route::get('/myinfo', 'InfoController@showInfo');
+
