@@ -37,3 +37,5 @@ Route::get('/deletefromcart_itemid_{itemid}', 'HomeController@deleteFromCart');
 route::get('/sellstuff', 'SellStuffController@index');
 
 route::post('/publish', 'SellStuffController@publishGood');
+
+route::get('/mobile', 'MobileAppController@index');
