@@ -33,3 +33,7 @@ Route::get('/showDetail_itemid_{itemid}', 'HomeController@showDetail');
 Route::get('/buy_itemid_{itemid}', 'HomeController@buy');
 
 Route::get('/deletefromcart_itemid_{itemid}', 'HomeController@deleteFromCart');
+
+route::get('/sellstuff', 'SellStuffController@index');
+
+route::post('/publish', 'SellStuffController@publishGood');

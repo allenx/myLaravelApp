@@ -11,7 +11,7 @@
                     @foreach($items as $item)
                         <div class="col-md-3" style="margin-top: 36px;">
                             <div id="imgContainer" style="width: 210px; height: 220px;">
-                                <img src="{{$item->img_url}}" alt="" style="max-width: 100%; max-height: inherit; object-fit: contain;"/>
+                                <img src="{{$item->img_url}}" alt="" style="max-width: 100%; max-height: inherit; object-fit: contain;">
                             </div>
                             <script type="text/javascript">
                                 (function() {

@@ -19,6 +19,8 @@
 
     <style>
         body {
+            background-image: url(https://9to5mac.files.wordpress.com/2016/06/sierra.jpg);
+            background-size: cover;
             font-family: 'Lato';
         }
 
@@ -28,9 +30,9 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-inverse navbar-static-top" >
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header navbar-inverse">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -49,7 +51,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">回到主页</a></li>
+                    <li><a href="{{ url('/home') }}">逛一下!</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -66,6 +68,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/myinfo') }}"><i class="fa fa-btn fa-sign-out"></i>个人中心</a></li>
+                                <li><a href="{{ url('/sellstuff') }}"><i class="fa fa-btn fa-sign-out"></i>发布商品</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>注销</a></li>
 
                             </ul>

@@ -5,10 +5,25 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">个人中心</div>
+                    <div class="panel-heading">{{$detail[0]->name}}</div>
 
                     <div class="panel-body">
-                        <div class="col-md-6"><img src=""/></div>
+                        <div id="imgContainer" class="col-md-6" style="width: 290px; height: 280px;">
+                            <img src="{{$detail[0]->img_url}}" style="object-fit: contain; max-width: 100%">
+                        </div>
+                        <script type="text/javascript">
+                            (function() {
+
+                                var img = document.getElementById('imgContainer').firstChild;
+                                img.onload = function() {
+                                    if(img.height > img.width) {
+                                        img.height = '100%';
+                                        img.width = 'auto';
+                                    }
+                                };
+
+                            }());
+                        </script>
                         <div class="col-md-6">
                             <p style="font-weight: bold; font-size: 30px">{{$detail[0]->name}}</p>
                             <p style="color: #d43f3a;">{{$detail[0]->description}}</p>
