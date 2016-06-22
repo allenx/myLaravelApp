@@ -10,7 +10,23 @@
                 <div class="panel-body">
                     @foreach($items as $item)
                         <div class="col-md-3" style="margin-top: 36px;">
-                            <img class="hero" src="http://images.apple.com/macbook-pro/images/overview_osx_hero_2x.jpg" width="219" height="128" alt="">
+                            <div id="imgContainer" style="width: 210px; height: 220px;">
+                                <img src="{{$item->img_url}}" alt="" style="max-width: 100%; max-height: inherit; object-fit: contain;"/>
+                            </div>
+                            <script type="text/javascript">
+                                (function() {
+
+                                    var img = document.getElementById('imgContainer').firstChild;
+                                    img.onload = function() {
+                                        if(img.height > img.width) {
+                                            img.height = '100%';
+                                            img.width = 'auto';
+                                        }
+                                    };
+
+                                }());
+                            </script>
+
                             <p>{{$item->name}}</p>
                             <p>售价: ¥{{$item->price}}</p>
                             <p>库存: {{$item->stock}}</p>

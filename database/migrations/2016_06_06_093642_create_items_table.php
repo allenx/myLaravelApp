@@ -21,6 +21,7 @@ class CreateItemsTable extends Migration
             $table->string('description', 500);
             $table->integer('stock');
             $table->integer('salecounts');
+            $table->string('img_url');
             $table->timestamps();
         });
     }
