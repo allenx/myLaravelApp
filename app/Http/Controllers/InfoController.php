@@ -17,6 +17,11 @@ class InfoController extends Controller
 {
     public function showInfo() {
         $userResult = DB::select('select * from users where id = :id', ['id'=>Auth::user()->id]);
-        return view('myself')->with('userinfo', $userResult);
+        $cartsResult = DB::select('select * from carts where user_id = :id', ['id' => Auth::user()->id]);
+        $itemsResult = [];
+        for ($i = 0; $i < count($cartsResult); ++$i) {
+            $itemsResult[$i] = DB::select('select * from items where id = :id', ['id'=>$cartsResult[$i]->item_id]);
+        }
+        return view('myself')->with('userInfo', $userResult)->with('itemsResults', $itemsResult);
     }
 }

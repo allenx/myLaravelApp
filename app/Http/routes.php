@@ -28,3 +28,8 @@ Route::get('/addtocart_itemid_{itemid}', 'HomeController@addToCart');
 
 Route::get('/myinfo', 'InfoController@showInfo');
 
+Route::get('/showDetail_itemid_{itemid}', 'HomeController@showDetail');
+
+Route::get('/buy_itemid_{itemid}', 'HomeController@buy');
+
+Route::get('/deletefromcart_itemid_{itemid}', 'HomeController@deleteFromCart');
