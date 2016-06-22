@@ -23,7 +23,7 @@
                                         @foreach($itemsResults as $itemsResult)
                                         <div id="{{$itemsResult[0]->id}}" class="col-md-10" style="margin-top: 20px; border-bottom: solid 1px #dddddd;width: 100%;">
                                             <div class="col-md-2">
-                                                <img src=""/>
+
                                             </div>
                                             <div class="col-md-5">
                                                 <p>{{$itemsResult[0]->name}}</p>
