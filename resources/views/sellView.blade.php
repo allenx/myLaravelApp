@@ -2,10 +2,9 @@
 
 @section('content')
     <style>
-        .avatar{
-            width:100px;
-            height:100px;
-            border-radius: 100%;
+        .pic{
+            width:200px;
+            height:200px;
             background-color: #4cae4c;
             margin-left: auto;
             margin-right: auto;
@@ -26,7 +25,7 @@
 
                             <br>
                             <br>
-                            <div class="avatar" ></div>
+                            <div class="pic" ></div>
                             <br>
                             <br>
 
